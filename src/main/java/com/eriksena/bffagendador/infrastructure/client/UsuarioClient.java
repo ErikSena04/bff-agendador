@@ -1,7 +1,7 @@
 package com.eriksena.bffagendador.infrastructure.client;
 
 import com.eriksena.bffagendador.business.dtos.request.EnderecoDTORequest;
-import com.eriksena.bffagendador.business.dtos.request.LoginRequest;
+import com.eriksena.bffagendador.business.dtos.request.LoginDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.TelefoneDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.UsuarioDTORequest;
 import com.eriksena.bffagendador.business.dtos.response.EnderecoDTOResponse;
@@ -21,7 +21,7 @@ public interface UsuarioClient {
     UsuarioDTOResponse salvaUsuario(@RequestBody UsuarioDTORequest usuarioDTO);
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequest usuarioDTO);
+    public String login(@RequestBody LoginDTORequest usuarioDTO);
 
     @DeleteMapping("/{email}")
     Void deletaUsuarioPorEmail(@PathVariable String email,

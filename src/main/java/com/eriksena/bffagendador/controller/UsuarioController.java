@@ -2,7 +2,7 @@ package com.eriksena.bffagendador.controller;
 
 
 import com.eriksena.bffagendador.business.dtos.request.EnderecoDTORequest;
-import com.eriksena.bffagendador.business.dtos.request.LoginRequest;
+import com.eriksena.bffagendador.business.dtos.request.LoginDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.TelefoneDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.UsuarioDTORequest;
 import com.eriksena.bffagendador.business.dtos.response.EnderecoDTOResponse;
@@ -38,7 +38,7 @@ public class UsuarioController {
     @ApiResponse(responseCode = "200", description = "Usuário logado com sucesso")
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
     @ApiResponse(responseCode = "500", description = "Erro de servidor")
-    public String login(@RequestBody LoginRequest usuarioDTO) {
+    public String login(@RequestBody LoginDTORequest usuarioDTO) {
         return usuarioService.loginUsuario(usuarioDTO);
     }
 

@@ -1,7 +1,7 @@
 package com.eriksena.bffagendador.business.service;
 
 import com.eriksena.bffagendador.business.dtos.request.EnderecoDTORequest;
-import com.eriksena.bffagendador.business.dtos.request.LoginRequest;
+import com.eriksena.bffagendador.business.dtos.request.LoginDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.TelefoneDTORequest;
 import com.eriksena.bffagendador.business.dtos.request.UsuarioDTORequest;
 import com.eriksena.bffagendador.business.dtos.response.EnderecoDTOResponse;
@@ -21,7 +21,7 @@ public class UsuarioService {
         return usuarioClient.salvaUsuario(usuarioDTO);
     }
 
-    public String loginUsuario(LoginRequest usuarioDTO){
+    public String loginUsuario(LoginDTORequest usuarioDTO){
         return usuarioClient.login(usuarioDTO);
     }
 
